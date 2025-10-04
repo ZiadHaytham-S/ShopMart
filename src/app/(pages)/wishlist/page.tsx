@@ -20,7 +20,7 @@ export default function Wishlist() {
 
   async function fetchWishlist() {
       try {
-const response = await fetch("http://localhost:3000/api/get-WishList");
+const response = await fetch(`${process.env.NEXTAUTH_URL}api/get-WishList`);
         if (!response.ok) throw new Error("Failed to fetch wishlist");
         const { data } = await response.json();
         setItems(data);
