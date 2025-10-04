@@ -27,7 +27,7 @@ export default function CartContextProvider({children} : {children : ReactNode})
 
   async function getCart() {
     
-    const response = await fetch(`${process.env.NEXTAUTH_URL}api/get-cart`)
+    const response = await fetch(`/api/get-cart`)
    
     const data: CartResponse = await response.json()
     

@@ -27,7 +27,7 @@ export default function Allorders() {
     try {
       const userId = localStorage.getItem('userId');
       const response = await fetch(
-        `${process.env.NEXTAUTH_URL}api/get-orders?userId=${userId}`
+        `/api/get-orders?userId=${userId}`
       );
       const data = await response.json();
       
