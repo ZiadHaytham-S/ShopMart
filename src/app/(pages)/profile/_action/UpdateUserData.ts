@@ -8,7 +8,7 @@ export async function updateUserAction(name: string, email: string, phone: strin
     const token = await getUserToken()
     if (!token) return { error: "You are not logged in" };
 
-    const res = await fetch("https://ecommerce.routemisr.com/api/v1/users/updateMe/", {
+    const res = await fetch(`${process.env.URL_API}/users/updateMe/`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
